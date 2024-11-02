@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+
+@font-face {
+	font-family: Dream;
+	src: url("../fonts/Dream\ Sparks-Shiny.ttf");
+}
+@font-face {
+	font-family: Zybo;
+	src: url("../fonts/Zybo\ Pop\ -\ Deco.ttf");
+}
+
+:root {
+	--yellow1: #e6d021;
+	--yellow2: #e29e28;
+	--orange: #d7573b;
+	--blue: #73a5a8;
+	--purple: #646199;
+}
+
+body {
+	font-family: Dream;
+	background-color: rgb(247, 238, 221);
+}
+
+.hero {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	translate: -50% calc(-50% + 35px);
+	width: 100vmin;
+	height: calc(100vh - 50px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+h1 {
+	font-family: Dream;
+	color: var(--yellow2);
+	filter: drop-shadow(5px 5px 0 var(--orange));
+	font-size: 10vmin;
+	margin:0;
+}
+.hero > .left {
+	justify-content: end;
+	align-items: end;
+}
+.text > p, .text > a {
+	margin:0;
+	margin-top: 20px;
+	font-size: 5vmin;
+}
+.left > .text {
+	text-align: right;
+	margin-top: 20px;
+}
+.right > .text {
+	text-align: left;
+	margin-bottom: 20px;
+}
+.hero > .right, .hero > .left {
+	display: flex;
+	flex-direction: column;
+	padding: 35px 35px 35px 35px;
+	box-sizing: border-box;
+	width: 50%;
+	height: 100%;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.hero > * > .panel {
+	border: solid 3px;
+	border-radius: 0 30px;
+	flex:1;
+	width: 100%;
+	box-sizing: border-box;
+	background-position: center;
+}
+@media (max-width:700px) {
+	.hero {
+		flex-direction: column;
+	}
+	.hero > .left, .hero > .right {
+		width: 100vw;
+	}
+}
+
+#p1 {
+	background-image: url("../images/trash.png");
+	background-size: cover;
+}
+#p2 {
+	background-image: url("../images/clean.png");
+	background-size: contain;
+}
+
+a {
+	color: var(--blue);
+	text-decoration: none;
+	filter: drop-shadow(2px 2px 0 var(--purple));
+}
+
+.content {
+	position: absolute;
+	top: 100vh;
+	left: 0;
+	width: 100vw;
+	padding: 35px;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+h2 {
+	font-size: 50px;
+	color: var(--orange);
+	font-family: Dream;
+}
+.section {
+	max-width: 500px;
+	min-width: 400px;
+	flex:1;
+	margin:35px;
+	font-family: "DynaPuff", system-ui;
+	font-size: 20px;
+	box-sizing: border-box;
+}
+
+.navbar {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	background-color: var(--orange);
+	z-index: 3;
+	border-bottom: solid 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navbar > * {
+	box-sizing: border-box;
+	color: var(--yellow2);
+	font-size: 25px;
+	filter: drop-shadow(2px 2px black);
+	border-bottom: dotted;
+	margin: 10px;
+}
+
+.form {
+	width: 100%;
+	height: 500px;
+	border: solid 3px;
+}
